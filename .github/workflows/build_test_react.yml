@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [main]
 
-permissions:
-  pages: write
-  id-token: write
-
 jobs:
   build_test:
     runs-on: ubuntu-latest
@@ -42,6 +38,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    
+    permissions:
+      pages: write
+      id-token: write
+    
     needs: build_test
     steps:
     - name: Deploy to GitHub Pages
