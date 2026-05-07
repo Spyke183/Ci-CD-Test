@@ -1,0 +1,14 @@
+{
+    "source": {
+        "include": [
+            "src"
+        ],
+        "includePattern": ".js$",
+        "excludePattern": "(node_modules/|docs)"
+    },
+    "opts": {
+        "destination": "./public/docs/",
+        "readme": "README.md",
+        "recurse": true
+    }
+}
